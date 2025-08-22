@@ -26,7 +26,10 @@ export default function Portfolio() {
   ];
 
   return (
-    <section className="bg-gray-50 py-20 px-6 md:px-16 font-montserrat">
+    <section
+      id="Portfolio"
+      className="bg-gray-50 py-20 px-28 md:px-28 font-montserrat"
+    >
       <div className="text-center mb-14">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
           Our Portfolio

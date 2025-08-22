@@ -4,22 +4,39 @@ import { FaChevronDown, FaBars, FaTimes } from "react-icons/fa";
 import Logo from "./ui/Logo";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-export default function Navbar() {
+// export default function Navbar() {
+
+const Navbar = () => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
     { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Services", path: "/services" },
-    { name: "Technologies", path: "/technologies" },
-    { name: "Portfolio", path: "/Portfolio" },
+    { name: "About", path: "#about" },
+    { name: "Services", path: "#services" },
+    { name: "Technologies", path: "#technologies" },
+    { name: "Portfolio", path: "#Portfolio" },
   ];
+  const [stickyNavbar, setStickyNavbar] = useState<boolean>(false);
 
+  //hide top of the navbar & add sticky effect to the navbar
+  useEffect(() => {
+    const changeNavbarPosition = () => {
+      window.scrollY >= 128 ? setStickyNavbar(true) : setStickyNavbar(false);
+    };
+    window.addEventListener("scroll", changeNavbarPosition);
+    return () => window.removeEventListener("scroll", changeNavbarPosition);
+  }, []);
   return (
-    <nav className="bg-gray-195 text-black px-6 py-4 flex justify-between items-center relative">
+    <nav
+      className={`${
+        stickyNavbar
+          ? "header-sticky bg-gradient-to-b from-[#0B0D2C] to-[#020312]"
+          : "bg-transparent"
+      } z-50 text-white flex justify-between items-center w-full fixed top-0 px-28`}
+    >
       {/* Logo */}
       <div className="flex items-center space-x-2">
         <div className="max-lg+:ml-4">
@@ -31,7 +48,7 @@ export default function Navbar() {
       </div>
 
       {/* Desktop Menu */}
-      <ul className="hidden md:flex space-x-10 items-center font-montserrat text-md">
+      <ul className="hidden md:flex space-x-10 items-center font-montserrat  text-md">
         {menuItems.map((item) => (
           <li key={item.name} className="relative group cursor-pointer">
             <Link
@@ -43,7 +60,7 @@ export default function Navbar() {
               }`}
             >
               {item.name}
-              <FaChevronDown className="ml-1 w-3 h-3" />
+              {/* <FaChevronDown className="ml-1 w-3 h-3" /> */}
             </Link>
           </li>
         ))}
@@ -52,7 +69,7 @@ export default function Navbar() {
       {/* Contact Button (Desktop) */}
       <div className="hidden md:block">
         <Link
-          href="/contact"
+          href="#contact"
           className="bg-primary text-white px-4 py-4 rounded-lg font-montserrat font-medium hover:bg-blue-800 transition-colors duration-300 shadow-md text-sm"
         >
           Talk to Us
@@ -85,7 +102,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href="/contact"
+            href="#contact"
             onClick={() => setIsOpen(false)}
             className="mt-4 bg-primary text-white px-4 py-2 rounded-lg font-montserrat font-medium hover:bg-blue-800 transition-colors duration-300 shadow-md text-sm"
           >
@@ -95,4 +112,5 @@ export default function Navbar() {
       )}
     </nav>
   );
-}
+};
+export default Navbar;

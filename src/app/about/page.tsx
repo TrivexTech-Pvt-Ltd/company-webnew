@@ -5,7 +5,10 @@ import { TbTargetArrow } from "react-icons/tb";
 export default function AboutUs() {
   return (
     //  <section className="flex flex-col md:flex-row items-center justify-between bg-white py-16 px-8 md:px-20 font-montserrat"></section>
-    <section className="flex flex-col md:flex-row items-center justify-between bg-white py-16 px-8 md:px-20 font-montserrat">
+    <section
+      id="about"
+      className="flex flex-col md:flex-row items-center justify-between bg-white py-16 px-28 md:px-28 font-montserrat"
+    >
       <div className=" text-center">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
           About Us
@@ -23,7 +26,6 @@ export default function AboutUs() {
           driving digital transformation and accelerating innovation.
         </p>
         <div className="flex flex-col md:flex-row items-center md:space-x-10">
-        
           <div className="flex-1 text-left">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
               Our <span className="text-primary">Vision</span>{" "}
@@ -44,7 +46,7 @@ export default function AboutUs() {
               success.
             </p>
           </div>
-           <div className="flex-1 mb-8 md:mb-0">
+          <div className="flex-1 mb-8 md:mb-0">
             <div className="relative w-full h-64 md:h-96">
               <Image
                 src="/assets/images/about/about.jpg"

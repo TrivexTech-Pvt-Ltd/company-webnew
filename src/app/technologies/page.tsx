@@ -1,81 +1,168 @@
-import { FaReact, FaNodeJs, FaPython, FaLaravel } from "react-icons/fa";
-import { SiTailwindcss, SiMongodb, SiNextdotjs } from "react-icons/si";
-import { DiDotnet } from "react-icons/di";
+"use client";
 
-export default function Technology() {
-  const technologies = [
+import { useState, ReactNode, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { SiExpo, SiMysql, SiMongodb, SiGooglecloud } from "react-icons/si";
+import ArchitectureServiceAWSAmplify from "aws-react-icons/icons/ArchitectureServiceAWSAmplify";
+
+import {
+  FaNodeJs,
+  FaPhp,
+  FaJava,
+  FaPython,
+  FaAngular,
+  FaReact,
+} from "react-icons/fa";
+import {
+  SiDotnet,
+  SiGo,
+  SiVuedotjs,
+  SiNextdotjs,
+  SiLaravel,
+} from "react-icons/si";
+import { VscAzure } from "react-icons/vsc";
+import { DiPostgresql } from "react-icons/di";
+
+const tabs = [
+  { name: "Server-side" },
+  { name: "Frontend" },
+  { name: "Mobile" },
+  { name: "Database" },
+  { name: "Cloud Environments" },
+];
+
+const techData: Record<string, { name: string; icon: ReactNode }[]> = {
+  "Server-side": [
+    { name: ".NET", icon: <SiDotnet size={50} className="text-purple-600" /> },
     {
-      icon: <FaReact size={40} className="text-cyan-400" />,
-      name: "React.js",
-      description:
-        "Building dynamic and fast web interfaces with reusable components.",
+      name: "Node.Js",
+      icon: <FaNodeJs size={50} className="text-green-600" />,
     },
+    { name: "PHP", icon: <FaPhp size={50} className="text-indigo-500" /> },
+    { name: "Java", icon: <FaJava size={50} className="text-orange-600" /> },
     {
-      icon: <SiNextdotjs size={40} className="text-black" />,
-      name: "Next.js",
-      description:
-        "Server-side rendering and static site generation for optimized performance.",
-    },
-    {
-      icon: <DiDotnet size={40} className="text-purple-600" />,
-      name: "ASP.NET",
-      description:
-        "Robust enterprise-grade framework for scalable web applications.",
-    },
-    {
-      icon: <FaLaravel size={40} className="text-red-500" />,
-      name: "Laravel",
-      description:
-        "Elegant PHP framework for building modern, scalable web applications.",
-    },
-    {
-      icon: <FaNodeJs size={40} className="text-green-500" />,
-      name: "Node.js",
-      description: "Backend development with scalable, high-performance APIs.",
-    },
-    {
-      icon: <SiTailwindcss size={40} className="text-sky-400" />,
-      name: "Tailwind CSS",
-      description: "Modern utility-first CSS framework for rapid design.",
-    },
-    {
-      icon: <SiMongodb size={40} className="text-green-400" />,
-      name: "MongoDB",
-      description:
-        "NoSQL database for flexible, high-performance data storage.",
-    },
-    {
-      icon: <FaPython size={40} className="text-yellow-400" />,
       name: "Python",
-      description:
-        "Powerful scripting and backend solutions for modern applications.",
+      icon: <FaPython size={50} className="text-yellow-400" />,
     },
-  ];
+    { name: "Laravel", icon: <SiLaravel size={50} className="text-red-500" /> },
+  ],
+  Frontend: [
+    { name: "Angular", icon: <FaAngular size={50} className="text-red-600" /> },
+    { name: "React", icon: <FaReact size={50} className="text-blue-500" /> },
+    {
+      name: "Vue.Js",
+      icon: <SiVuedotjs size={50} className="text-green-500" />,
+    },
+    { name: "Next.Js", icon: <SiNextdotjs size={50} className="text-black" /> },
+  ],
+  Mobile: [
+    {
+      name: "React Native",
+      icon: <FaReact size={50} className="text-blue-500" />,
+    },
+    { name: "Flutter", icon: <FaReact size={50} className="text-sky-400" /> },
+    { name: "Expo", icon: <SiExpo size={50} className="text-black" /> },
+  ],
+  Database: [
+    { name: "MySQL", icon: <SiMysql size={50} className="text-sky-700" /> },
+    {
+      name: "PostgreSQL",
+      icon: <DiPostgresql size={50} className="text-blue-700" />,
+    },
+    {
+      name: "MongoDB",
+      icon: <SiMongodb size={50} className="text-green-600" />,
+    },
+  ],
+  "Cloud Environments": [
+    {
+      name: "AWS",
+      icon: (
+        <ArchitectureServiceAWSAmplify size={50} className="text-orange-500" />
+      ),
+    },
+    {
+      name: "Azure",
+      icon: <VscAzure size={50} className="text-blue-600" />,
+    },
+
+    {
+      name: "Google Cloud",
+      icon: <SiGooglecloud size={50} className="text-blue-500" />,
+    },
+  ],
+};
+
+export default function Technologies() {
+  const [activeTab, setActiveTab] = useState(tabs[0].name);
+
+  // Auto tab switching
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveTab((prev) => {
+        const currentIndex = tabs.findIndex((tab) => tab.name === prev);
+        const nextIndex = (currentIndex + 1) % tabs.length;
+        return tabs[nextIndex].name;
+      });
+    }, 3000); // Change tab every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <section className="bg-gray-50 py-20 px-6 md:px-16 font-montserrat">
-      <div className="text-center mb-14">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-          Our Technology Stack
-        </h2>
-        <p className="text-cyan-500 font-semibold mt-2 text-lg underline decoration-cyan-400 decoration-4 underline-offset-4">
-          What we use
-        </p>
+    <section className="py-16 px-28 bg-gray-50 text-center">
+      <h2 className="text-3xl md:text-4xl font-bold mb-10">
+        Technologies we work with
+      </h2>
+
+      {/* Tabs */}
+      <div className="flex flex-wrap justify-center gap-6 mb-10">
+        {tabs.map((tab) => (
+          <motion.button
+            key={tab.name}
+            onClick={() => setActiveTab(tab.name)}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            className={`px-4 py-2 text-base font-medium border-b-2 transition-colors duration-300 ${
+              activeTab === tab.name
+                ? "border-purple-600 text-purple-600"
+                : "border-transparent hover:text-purple-600"
+            }`}
+          >
+            {tab.name}
+          </motion.button>
+        ))}
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-        {technologies.map((tech, index) => (
-          <div
-            key={index}
-            className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 text-center group"
-          >
-            <div className="flex justify-center mb-4">{tech.icon}</div>
-            <h3 className="text-xl font-semibold text-gray-800 mb-3 group-hover:text-cyan-500 transition-colors">
-              {tech.name}
-            </h3>
-            <p className="text-gray-600">{tech.description}</p>
-          </div>
-        ))}
+      {/* Technologies Grid with Animation */}
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-12 justify-center max-w-5xl mx-auto">
+        <AnimatePresence mode="wait">
+          {(techData[activeTab] || []).length > 0 ? (
+            techData[activeTab].map((tech, index) => (
+              <motion.div
+                key={`${tech.name}-${index}`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+                className="flex flex-col items-center hover:scale-110 transition-transform duration-300"
+              >
+                <div className="mb-2">{tech.icon}</div>
+                <p className="text-sm font-medium">{tech.name}</p>
+              </motion.div>
+            ))
+          ) : (
+            <motion.p
+              key="empty"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="col-span-full text-gray-500 text-lg"
+            >
+              No technologies available for this category yet.
+            </motion.p>
+          )}
+        </AnimatePresence>
       </div>
     </section>
   );

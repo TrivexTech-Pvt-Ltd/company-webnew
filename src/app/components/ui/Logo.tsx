@@ -5,10 +5,10 @@ export default function Logo() {
   return (
     <Link href="/">
       <Image
-        src="/assets/images/company/trivextech2.svg"
+        src="/assets/images/company/logo-new.png"
         alt="TrivexTech Logo"
-        width={80}
-        height={56}
+        width={120}
+        height={120}
         priority
       />
     </Link>

@@ -8,7 +8,7 @@ export default function Services() {
   const services = [
     {
       icon: <MdMiscellaneousServices size={40} className="text-cyan-400" />,
-      title: " Services",
+      title: "Services",
       description:
         "Empowering your business with cutting-edge software solutions tailored to meet modern digital demands.",
       image: "assets/images/about/about.jpg",
@@ -51,8 +51,20 @@ export default function Services() {
   ];
 
   return (
-    <section className="bg-gray-50 py-20 px-6 md:px-16 font-montserrat">
-      <div className="text-center mb-14">
+    <section
+      id="services"
+      className=" relative py-20 px-28 md:px-28 font-montserrat"
+      style={{
+        backgroundImage: "url('/assets/images/Hero/bg1.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      {/* Optional white overlay for readability */}
+      <div className="absolute inset-0 bg-white/60"></div>
+
+      <div className="relative z-10 text-center mb-14">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
           Our Services and expertise
         </h2>
@@ -61,7 +73,7 @@ export default function Services() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {services.map((service, index) => (
           <div
             key={index}
@@ -89,7 +101,6 @@ export default function Services() {
               <p className="text-gray-600 group-hover:text-gray-200 transition-colors duration-300 flex-grow">
                 {service.description}
               </p>
-              {/* Read More Button */}
               <button className="mt-auto px-5 py-2 text-sm font-medium rounded-full border border-cyan-400 text-cyan-400 group-hover:border-white group-hover:text-white group-hover:bg-cyan-500 transition-all duration-300">
                 Read More
               </button>
