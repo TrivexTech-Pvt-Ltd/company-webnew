@@ -22,8 +22,8 @@ export default function AboutUs() {
           hands-on industry experience, our team specializes in full-stack
           development, mobile applications, cloud integrations, and cutting-edge
           technologies like AI and machine learning. We combine technical
-          expertise with a deep understanding of our clients’ goals to deliver
-          scalable, secure, and user-centric products. Whether you're a startup
+          expertise with a deep understanding of our clients&apos; goals to deliver
+          scalable, secure, and user-centric products. Whether you&apos;re a startup
           or an established enterprise, TrivexTech is your trusted partner for
           driving digital transformation and accelerating innovation.
         </p>
