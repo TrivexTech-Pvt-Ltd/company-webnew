@@ -15,9 +15,9 @@ export default function HeroSection() {
             priority
           />
         </div>
-        <div className="md:px-28 px-10 md:text-left relative z-10 grid md:grid-cols-2 top-5">
+        <div className="md:px-28 px-10 md:text-left relative z-10 grid md:grid-cols-2 top-5 py-8">
           <div >
-            <h2 className="text-base md:text-xl font-bold text-primary leading-tight mb-4 font-montserrat">We provide IT Services</h2>
+            <h2 className="text-base md:text-xl font-bold text-primary leading-tight mb-4 font-montserrat">Building Whats Next</h2>
             <h1 className="text-2xl md:text-5xl font-bold text-white leading-tight font-montserrat">
               Welcome to TrivexTech Pvt Ltd
             </h1>
