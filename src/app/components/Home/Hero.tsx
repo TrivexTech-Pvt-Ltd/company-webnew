@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function HeroSection() {
   return (
  
-      <section className="relative h-96 md:h-[520px] md:min-h-screen w-full flex items-center justify-center text-center px-4">
+      <section className="relative h-96 md:h-[520px] md:min-h-screen w-full flex items-center justify-center text-center px-4 py-12">
        
         <div className=" h-screen  absolute inset-0 -z-10">
           <Image
