@@ -21,7 +21,7 @@ export default function WhyChoose() {
       {/* Right Content Section */}
       <div className="lg:w-1/2 w-full flex flex-col justify-center mt-3 md:mt-0 px-8 lg:px-20 bg-transparent">
         <h2 className="text-2xl lg:text-4xl font-bold text-gray-900 mb-4 font-montserrat">
-          Why <span className="text-teal-600">Choose Trivex</span>
+          Why <span className="text-teal-600">Choose TrivexTech</span>
         </h2>
         <p className="text-gray-600 mb-8 md:text-base text-sm font-montserrat leading-6">
           TrivexTech is a trusted full-stack software development partner with over 7 years of experience, delivering high-quality, scalable, and performance-driven solutions for startups and enterprises alike. They specialize in cutting-edge services—ranging from web & mobile apps and cloud DevOps to AI-integrated systems and UI/UX design—built on agile transparency and cost-effective engineering.
