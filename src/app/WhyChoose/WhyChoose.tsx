@@ -4,10 +4,10 @@ export default function WhyChoose() {
   return (
     // <section className="w-full flex flex-col lg:flex-row items-center justify-between font-sans py-16 px-28">
     <section
-      className="w-full flex flex-col lg:flex-row items-center justify-between font-sans py-16 px-28 bg-cover bg-center"
+      className="w-full flex flex-col lg:flex-row items-center justify-between font-sans bg-cover bg-center"
       style={{ backgroundImage: "url('/assets/images/Hero/cta-3-1-bg.jpg')" }} // Background image here
     >
-      {/* Left Image Section */}
+     
       <div className="lg:w-1/2 w-full">
         <Image
           src="/assets/images/Choose/choose.png" // must be in /public
@@ -19,14 +19,12 @@ export default function WhyChoose() {
       </div>
 
       {/* Right Content Section */}
-      <div className="lg:w-1/2 w-full flex flex-col justify-center px-8 lg:px-20 bg-gray-50">
-        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+      <div className="lg:w-1/2 w-full flex flex-col justify-center mt-3 md:mt-0 px-8 lg:px-20 bg-transparent">
+        <h2 className="text-2xl lg:text-4xl font-bold text-gray-900 mb-4 font-montserrat">
           Why <span className="text-teal-600">Choose Intech</span>
         </h2>
-        <p className="text-gray-600 mb-8">
-          Dolor sit amet consectetur elit sed do eiusmod tempor incididunt
-          labore et dolore magna aliqua. Enim ad minim veniam quis nostrud
-          exercitation ullamco laboris aliquip ex ea commodo consequat.
+        <p className="text-gray-600 mb-8 md:text-base text-sm font-montserrat leading-6">
+          TrivexTech is a trusted full-stack software development partner with over 7 years of experience, delivering high-quality, scalable, and performance-driven solutions for startups and enterprises alike. They specialize in cutting-edge services—ranging from web & mobile apps and cloud DevOps to AI-integrated systems and UI/UX design—built on agile transparency and cost-effective engineering.
         </p>
 
         <div className="flex items-start mb-6">
@@ -47,12 +45,11 @@ export default function WhyChoose() {
             </svg>
           </div>
           <div>
-            <h3 className="text-lg font-semibold text-gray-900">
-              Protect your business
+            <h3 className="md:text-lg text-md font-semibold text-gray-900 font-montserrat">
+              Quality software product
             </h3>
-            <p className="text-gray-600">
-              Lorem ipsum dolor sit amet consectetur adipiscing sed do eiusmod
-              tempor incididunt ut labore.
+            <p className="text-gray-600 md:text-lg text-sm font-montserrat leading-6">
+              We deliver a high-performing and scalable digital solution. Throughout our collaboration, we ensure the final product is reliable, maintainable, and drives real impact for your business.
             </p>
           </div>
         </div>
@@ -75,12 +72,11 @@ export default function WhyChoose() {
             </svg>
           </div>
           <div>
-            <h3 className="text-lg font-semibold text-gray-900">
-              Secure your growth
+            <h3 className="md:text-lg text-md font-semibold text-gray-900 font-montserrat">
+              Trusted tech partner
             </h3>
-            <p className="text-gray-600">
-              Lorem ipsum dolor sit amet consectetur adipiscing sed do eiusmod
-              tempor incididunt ut labore.
+            <p className="md:text-lg text-sm text-gray-600 mb-4 font-montserrat leading-6" >
+              Trust is at the heart of our organization, earning us recognition as a Great Place to Work. We don’t rely on managers to dictate—we build guidelines together. The same transparency and honesty we foster internally guide how we build lasting relationships with our clients.
             </p>
           </div>
         </div>

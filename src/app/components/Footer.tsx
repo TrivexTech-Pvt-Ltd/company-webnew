@@ -12,34 +12,34 @@ const Footer = () => {
     setDate(new Date().getFullYear().toString());
   }, []);
   return (
-    <footer className="bg-gradient-to-r text-white from-slate-900 to-slate-700 w-full pt-10 lg:pt-16 font-montserrat">
+    <footer className="bg-gradient-to-r text-white from-slate-900 to-slate-700 w-full pt-0 lg:pt-16 font-montserrat">
       <div className="px-4 md:px-2 lg:px-5 lg+:px-20 2xl:px-56 3xl:px-80 py-6 grid lg:grid-cols-4 gap-8">
         <div className="space-y-4">
           <Logo />
-          <p className="text-base text-lightGray">
+          <p className="text-sm md:text-base text-lightGray">
             TrivexTech Pvt Ltd is a Sri Lanka–based software company building
             scalable web, mobile, and AI solutions.
           </p>
         </div>
         <div className="space-y-1 lg:space-y-4">
-          <h3 className="text-lg lg:text-xl font-semibold text-white">
+          <h3 className="text-sm md:text-base font-semibold text-white">
             Office
           </h3>
           <div className="flex flex-col gap-y-2 lg:gap-y-4">
-            <p className="text-base text-lightGray">
+            <p className="text-sm md:text-base text-lightGray">
               Head Office : Colombo, Sri Lanka
             </p>
-            <p className="text-base text-white underline">
+            <p className="text-sm md:text-base text-white underline">
               hello@trivextech.com
             </p>
-            <p className="text-base text-white">+94 773 223282 (Hotline)</p>
+            <p className="text-sm md:text-base text-white">+94 773 223282 (Hotline)</p>
           </div>
         </div>
         <div className="space-y-1 lg:space-y-4">
-          <h3 className="text-lg lg:text-xl font-semibold text-white">
+          <h3 className="text-sm md:text-base font-semibold text-white">
             Quick Links
           </h3>
-          <ul className="flex flex-col gap-y-2 lg:gap-y-4 text-base text-offWhite">
+          <ul className="flex flex-col gap-y-2 lg:gap-y-4 text-sm md:text-base text-offWhite">
             <li className="hover:underline w-fit">
               <Link href="/">Home</Link>
             </li>
@@ -49,11 +49,11 @@ const Footer = () => {
           </ul>
         </div>
         <div className="space-y-1 lg:space-y-4">
-          <h3 className="text-lg lg:text-xl font-semibold text-white">
+          <h3 className="text-sm md:text-base font-semibold text-white">
             Opening Time
           </h3>
           <div className="flex flex-col gap-y-4">
-            <p className="text-base text-lightGray leading-6">
+            <p className="text-sm md:text-base text-lightGray leading-6">
               Mon - Fri : 9.00 am - 6.00 pm
             </p>
             <div className="flex items-center gap-x-5">
@@ -86,7 +86,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="text-center px-4 md:px-2 lg:px-5 lg+:px-20 2xl:px-56 3xl:px-80 py-6 border-t border-dark-300  justify-center lg:justify-normal">
-        <p className="text-white font-medium text-sm ">
+        <p className="text-white font-medium text-sm md:text-base ">
           © Copyright TrivexTech Pvt Ltd All Rights Reserved
         </p>
       </div>

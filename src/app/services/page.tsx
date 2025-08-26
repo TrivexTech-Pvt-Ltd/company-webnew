@@ -53,7 +53,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className=" relative py-20 px-28 md:px-28 font-montserrat"
+      className=" relative md:py-20 px-4 md:px-28 font-montserrat"
       style={{
         backgroundImage: "url('/assets/images/Hero/bg1.jpg')",
         backgroundSize: "cover",
@@ -64,11 +64,11 @@ export default function Services() {
       {/* Optional white overlay for readability */}
       <div className="absolute inset-0 bg-white/60"></div>
 
-      <div className="relative z-10 text-center mb-14">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+      <div className="relative z-10 text-center md:mb-14 mb-4">
+        <h2 className="text-2xl md:text-4xl font-bold text-gray-900 font-montserrat">
           Our Services and expertise
         </h2>
-        <p className="text-cyan-500 font-semibold mt-2 text-lg underline decoration-cyan-400 decoration-4 underline-offset-4">
+        <p className="text-cyan-500 font-montserrat font-semibold mt-2 text-sm md:text-lg underline decoration-cyan-400 decoration-4 underline-offset-4">
           we provide
         </p>
       </div>
@@ -95,13 +95,13 @@ export default function Services() {
                   {service.icon}
                 </div>
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 group-hover:text-white transition-colors duration-300 mb-3">
+              <h3 className="text-sm md:text-xl font-montserrat font-semibold text-gray-800 group-hover:text-white transition-colors duration-300 mb-3">
                 {service.title}
               </h3>
-              <p className="text-gray-600 group-hover:text-gray-200 transition-colors duration-300 flex-grow">
+              <p className="text-sm md:text-xl font-montserrat leading-6   text-gray-600 group-hover:text-gray-200 transition-colors duration-300 flex-grow">
                 {service.description}
               </p>
-              <button className="mt-auto px-5 py-2 text-sm font-medium rounded-full border border-cyan-400 text-cyan-400 group-hover:border-white group-hover:text-white group-hover:bg-cyan-500 transition-all duration-300">
+              <button className="text-sm md:text-xl mt-4 font-montserrat md:mt-auto px-5 py-2 font-medium rounded-full border border-cyan-400 text-cyan-400 group-hover:border-white group-hover:text-white group-hover:bg-cyan-500 transition-all duration-300">
                 Read More
               </button>
             </div>

@@ -15,7 +15,6 @@ export default function Home() {
       <Services />
       <Technology />
       <WhyChoose />
-      <Portfolio />
       <Contact />
     </div>
   );

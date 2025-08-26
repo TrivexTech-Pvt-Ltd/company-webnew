@@ -35,7 +35,7 @@ const Navbar = () => {
         stickyNavbar
           ? "header-sticky bg-gradient-to-b from-[#0B0D2C] to-[#020312]"
           : "bg-transparent"
-      } z-50 text-white flex justify-between items-center w-full fixed top-0 px-28`}
+      } z-50 text-white flex justify-between items-center w-full fixed top-0 md:px-28 px-8`}
     >
       {/* Logo */}
       <div className="flex items-center space-x-2">
@@ -86,13 +86,13 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="absolute bg-white top-full left-0 w-full bg-gray-195 shadow-md flex flex-col items-center py-4 md:hidden">
+        <div className="absolute text-black  bg-white top-full left-0 w-full bg-gray-195 shadow-md flex flex-col items-center py-4 md:hidden">
           {menuItems.map((item) => (
             <Link
               key={item.name}
               href={item.path}
               onClick={() => setIsOpen(false)}
-              className={`py-2 text-lg font-montserrat ${
+              className={`py-2 md:text-2xl text-sm font-montserrat ${
                 pathname === item.path
                   ? "text-primary font-semibold"
                   : "hover:text-primary"
