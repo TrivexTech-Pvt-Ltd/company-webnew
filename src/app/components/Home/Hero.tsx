@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function HeroSection() {
   return (
  
-      <section className="relative h-96 md:h-[520px] md:min-h-screen w-full flex items-center justify-center text-center px-4 py-12">
+      <section className="relative h-[520px] md:min-h-screen w-full flex items-center justify-center text-center px-4 ">
        
         <div className=" h-screen  absolute inset-0 -z-10">
           <Image
@@ -15,7 +15,7 @@ export default function HeroSection() {
             priority
           />
         </div>
-        <div className="md:px-28 px-10 md:text-left relative z-10 grid md:grid-cols-2 top-5 py-8">
+        <div className="md:px-28 px-10 md:text-left relative z-10 grid md:grid-cols-2 top-5">
           <div >
             <h2 className="text-base md:text-xl font-bold text-primary leading-tight mb-4 font-montserrat">Building Whats Next</h2>
             <h1 className="text-2xl md:text-5xl font-bold text-white leading-tight font-montserrat">

@@ -63,7 +63,7 @@ const Footer = () => {
                 target="_blank"
                 className="rounded-full h-8 w-8 flex items-center justify-center border border-lightGray text-lightGray hover:bg-themeBlack hover:text-white hover:border-0"
               >
-                <FaLinkedin size={15} />
+                <FaFacebookF size={15} />
               </Link>
               <Link
                 aria-label="Visit our Linkedin page"
@@ -71,16 +71,16 @@ const Footer = () => {
                 target="_blank"
                 className="rounded-full h-8 w-8 flex items-center justify-center border border-lightGray text-lightGray hover:bg-themeBlack hover:text-white hover:border-0"
               >
-                <FaYoutube size={15} />
+                <FaLinkedin size={15} />
               </Link>
-              <Link
+              {/* <Link
                 aria-label="Visit our Youtube page"
                 href="www.youtube.com/@TrivexTech"
                 target="_blank"
                 className="rounded-full h-8 w-8 flex items-center justify-center border border-lightGray text-lightGray hover:bg-themeBlack hover:text-white hover:border-0"
               >
                 <FaTiktok size={15} />
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
