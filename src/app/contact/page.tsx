@@ -1,6 +1,6 @@
-
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { useEffect } from "react";
 export default function ContactUs() {
@@ -27,9 +27,12 @@ export default function ContactUs() {
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-start">
         {/* Left: Contact Form */}
         <div>
-          <h2 className="md:text-2xl text-xl font-bold mb-4 font-montserrat">Contact with us</h2>
+          <h2 className="md:text-2xl text-xl font-bold mb-4 font-montserrat">
+            Contact with us
+          </h2>
           <p className="text-gray-600 mb-6 md:text-xl text-sm font-montserrat leading-6">
-            Have questions or a project in mind? Our team is ready to help you bring your ideas to life.
+            Have questions or a project in mind? Our team is ready to help you
+            bring your ideas to life.
           </p>
           <form className="space-y-4" onSubmit={handleSubmit}>
             <div className="grid grid-cols-2 gap-4">
@@ -90,8 +93,17 @@ export default function ContactUs() {
             <p className="md:text-2xl text-sm font-semibold font-montserrat">
               Make a contact with our IT staffs. <br /> Call Us?
             </p>
-            <p className="md:text-2xl text-sm text-primary  font-bold mt-2 font-montserrat" >
-              +94 773 223 282
+            <p className="md:text-2xl text-sm text-primary  font-bold mt-2 font-montserrat">
+              <Link className="" href="tel:+94777152490">
+                <span>+94 777 152 490</span>
+                {/* +94 777 152490(Hotline) */}
+              </Link>
+              {/* +94 777 152 490 */}
+              <br />
+              <Link className="" href="tel:+94773223282">
+                <span> +94 773 223 282</span>
+                {/* +94 777 152490(Hotline) */}
+              </Link>
             </p>
           </div>
         </div>
