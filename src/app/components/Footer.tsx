@@ -3,7 +3,7 @@ import Link from "next/link";
 import Logo from "./ui/Logo";
 import { useEffect, useState } from "react";
 import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa6";
-import { FaLinkedin, FaYoutube } from "react-icons/fa";
+import { FaLinkedin, FaPhone, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   const [date, setDate] = useState<string | null>(null);
@@ -32,7 +32,25 @@ const Footer = () => {
             <p className="text-sm md:text-base text-white underline">
               hello@trivextech.com
             </p>
-            <p className="text-sm md:text-base text-white">+94 773 223282 (Hotline)</p>
+            <Link
+              className="text-sm md:text-base text-white"
+              href="tel:+94777152490"
+            >
+              <span className="text-sm md:text-base text-white">
+                +94 777 152 490
+              </span>
+              {/* +94 777 152490(Hotline) */}
+            </Link>
+            <Link
+              className="text-sm md:text-base text-white"
+              href="tel:+94773223282"
+            >
+              <span className="text-sm md:text-base text-white">
+                +94 773 223282
+              </span>
+              {/* +94 777 152490(Hotline) */}
+            </Link>
+            {/* <p className="text-sm md:text-base text-white">+94 773 223282</p> */}
           </div>
         </div>
         <div className="space-y-1 lg:space-y-4">
